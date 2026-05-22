@@ -12,7 +12,7 @@
       <link>https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-buildpacks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-buildpacks/</guid>
-      <description>No builder author can be truly omniscient, and whoever created yours surely was no exception!</description>
+      <description>No builder author can be truly omniscient, and whoever created yours surely was no exception.</description>
     </item>
     <item>
       <title>Customize buildpack behavior with build-time environment variables</title>
@@ -54,14 +54,14 @@
       <link>https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-export-target/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-export-target/</guid>
-      <description>&lt;p&gt;Tell &lt;code&gt;pack&lt;/code&gt; where you want your application image to be saved.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Tell &lt;code&gt;pack&lt;/code&gt; where you want your app image to be saved.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Specify the default launch process</title>
       <link>https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-default-launch-process/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-default-launch-process/</guid>
-      <description>Buildpacks can define multiple processes for an application image. Specify which process should be the default.</description>
+      <description>Buildpacks can define multiple processes for an app image. Specify which process should be the default.</description>
     </item>
   </channel>
 </rss>

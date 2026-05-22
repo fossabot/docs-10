@@ -17,7 +17,7 @@
 
 
 
-<meta property="og:title" content="Run the application · Cloud Native Buildpacks">
+<meta property="og:title" content="Run the app · Cloud Native Buildpacks">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://buildpacks.io/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">
 <meta property="og:locale" content="en_US">
@@ -33,7 +33,7 @@
 
 
 
-<meta property="twitter:title" content="Run the application · Cloud Native Buildpacks">
+<meta property="twitter:title" content="Run the app · Cloud Native Buildpacks">
 <meta property="twitter:card" content="summary">
 <meta property="twitter:image" content="https://buildpacks.io/images/buildpacks-social-card-square.jpg">
 <meta property="twitter:image:alt" content="Buildpacks project logo">
@@ -71,7 +71,7 @@
     }
   </style>
 
-  <title>Run the application · Cloud Native Buildpacks</title>
+  <title>Run the app · Cloud Native Buildpacks</title>
 </head>
 
 <body>
@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 active">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -880,7 +880,7 @@
   
     
     
-    <a href="https://github.com/buildpacks/docs/issues/new?body=%2A%2AOn&#43;Page%3A%2A%2A&#43;%5BRun&#43;the&#43;application%5D%28https%3A%2F%2Fbuildpacks.io%2Fdocs%2Ffor-app-developers%2Fhow-to%2Fbuild-outputs%2Fspecify-launch-process%2F%29"
+    <a href="https://github.com/buildpacks/docs/issues/new?body=%2A%2AOn&#43;Page%3A%2A%2A&#43;%5BRun&#43;the&#43;app%5D%28https%3A%2F%2Fbuildpacks.io%2Fdocs%2Ffor-app-developers%2Fhow-to%2Fbuild-outputs%2Fspecify-launch-process%2F%29"
        class="button-light button-small icon-button blank bg-white inline-flex" target="_blank">Report Issue</a>
 
     
@@ -893,7 +893,7 @@
 
 
         <div class="heading">
-          <h1 class="title">Run the application</h1>
+          <h1 class="title">Run the app</h1>
         </div>
 
         <p>Buildpacks-built images can contain multiple process types.</p>
@@ -938,7 +938,7 @@
 </span></span><span class="line"><span class="cl">  web (default)        bash         java -jar target/sample-0.0.1-SNAPSHOT.jar
 </span></span><span class="line"><span class="cl">  sys-info             bash         /layers/samples_hello-processes/sys-info/sys-info.sh
 </span></span></code></pre></div><p>Notice that the <code>java-maven</code> buildpack defined <code>web</code> as the default process type.
-If we had run the <code>pack build</code> command above with <code>--default-process sys-info</code>, <code>sys-info</code> would be the default process for the app image!</p>
+If we had run the preceding <code>pack build</code> command with <code>--default-process sys-info</code>, <code>sys-info</code> would be the default process for the app image.</p>
 <h3 id="run-a-multi-process-app">Run a multi-process app</h3>
 <p>Buildpacks are designed to give you much flexibility in how you run your app. The lifecycle includes a binary called the <code>launcher</code> which is present in the final app image and is responsible for starting your app.
 By default, the <code>launcher</code> will start processes with <code>bash</code> (these are referred to as <code>non-direct</code> processes). Processes that are started without <code>bash</code> are referred to as <code>direct</code> processes.
@@ -998,7 +998,7 @@ Note that while buildpack-provided environment variables will be set in the exec
   
     
     
-    <a href="https://github.com/buildpacks/docs/issues/new?body=%2A%2AOn&#43;Page%3A%2A%2A&#43;%5BRun&#43;the&#43;application%5D%28https%3A%2F%2Fbuildpacks.io%2Fdocs%2Ffor-app-developers%2Fhow-to%2Fbuild-outputs%2Fspecify-launch-process%2F%29"
+    <a href="https://github.com/buildpacks/docs/issues/new?body=%2A%2AOn&#43;Page%3A%2A%2A&#43;%5BRun&#43;the&#43;app%5D%28https%3A%2F%2Fbuildpacks.io%2Fdocs%2Ffor-app-developers%2Fhow-to%2Fbuild-outputs%2Fspecify-launch-process%2F%29"
        class="button-light button-small icon-button blank bg-white inline-flex" target="_blank">Report Issue</a>
 
     

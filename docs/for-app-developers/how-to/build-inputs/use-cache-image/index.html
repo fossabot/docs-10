@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -898,7 +898,7 @@
 
         <p>Cache images are a way to preserve build-optimizing layers across different host machines.
 These images can improve performance when using <code>pack</code> in ephemeral environments such as CI/CD pipelines.</p>
-<h2 id="using-cache-images---cache-image">Using Cache Images (<code>--cache-image</code>)</h2>
+<h2 id="using-cache-images---cache-image">Using cache images (<code>--cache-image</code>)</h2>
 <p>The <code>--cache-image</code> parameter must be in the following format</p>
 <pre tabindex="0"><code>--cache-image &lt;remote-image-location&gt;
 </code></pre><p>The <code>--cache-image</code> flag must be specified in conjunction with the <code>--publish</code> flag.</p>
@@ -911,10 +911,10 @@ These images can improve performance when using <code>pack</code> in ephemeral e
 <blockquote>
 <p><strong>NOTE:</strong>  If we wish to publish to an external registry like <code>Dockerhub</code> we will first need to authenticate with <code>docker</code> to allow us to push images. We can do this via <code>docker login</code></p>
 </blockquote>
-<p>Next we trust the <code>cnbs/sample-builder:resolute</code> builder in order to allow access to docker credentials when publishing.</p>
+<p>Next we trust the <code>cnbs/sample-builder:resolute</code> builder to allow access to docker credentials when publishing.</p>
 <pre tabindex="0"><code>pack config trusted-builders add cnbs/sample-builder:resolute
 </code></pre><!--+- "{{execute}}"+-->
-<p>To build the <code>localhost:5000/buildpack-examples/cache-image-example</code> application image
+<p>To build the <code>localhost:5000/buildpack-examples/cache-image-example</code> app image
 and the <code>localhost:5000/buildpack-examples/maven-cache-image:latest</code> cache image
 we may run the following</p>
 <pre tabindex="0"><code>pack build localhost:5000/buildpack-examples/cache-image-example \
@@ -928,8 +928,8 @@ we may run the following</p>
 <blockquote>
 <p><strong>NOTE:</strong>  Please omit <code>--network host</code> if you are using a remote registry like Dockerhub or on Windows.</p>
 </blockquote>
-<p>Now we may inspect both the application image, and the cache image by pulling them -</p>
-<p>Let&rsquo;s inspect the application image first -</p>
+<p>Now we may inspect both the app image, and the cache image by pulling them -</p>
+<p>Let&rsquo;s inspect the app image first -</p>
 <pre tabindex="0"><code>docker pull localhost:5000/buildpack-examples/cache-image-example
 docker inspect localhost:5000/buildpack-examples/cache-image-example
 </code></pre><!--+- "{{execute}}"+-->
@@ -948,7 +948,7 @@ builds may also update the specified <code>cache-image</code>.</p>
     --network host \
     --publish
 </code></pre><!--+- "{{execute}}"+-->
-<h3 id="image-retention">Image Retention</h3>
+<h3 id="image-retention">Image retention</h3>
 <p>Managing the lifecycle of images should be the responsibility of the owner, as <code>the platform does not automatically clean up old images from the registry</code>.<br>
 You can refer to your registry&rsquo;s documentation to learn how to accomplish this.</p>
 <ul>

@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -902,9 +902,9 @@ should be included/excluded in the build, and <a href="/docs/for-app-developers/
 <h3 id="example">Example</h3>
 <p>We will use our <a href="https://github.com/buildpacks/samples">samples</a> repo to demonstrate how to use a <code>project.toml</code> file.</p>
 <p>In the below example (<code>samples/apps/bash-script/project.toml</code>), we define project information (in this case, the <code>id</code>
-and human-readable <code>name</code> of the application we are building, and a <code>version</code>), and specify build information to pack.</p>
+and human-readable <code>name</code> of the app we are building, and a <code>version</code>), and specify build information to pack.</p>
 <p>Note the <code>include</code> and <code>exclude</code> sections in the below <code>project.toml</code> file use <code>gitignore</code> syntax. So <code>&quot;/README.md&quot;</code> excludes the <code>README</code>
-file at the root of the application. For more on <code>gitignore</code> matching see <a href="https://linuxize.com/post/gitignore-ignoring-files-in-git/#literal-file-names">these docs</a>.</p>
+file at the root of the app. For more on <code>gitignore</code> matching see <a href="https://linuxize.com/post/gitignore-ignoring-files-in-git/#literal-file-names">these docs</a>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">_</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">schema-version</span> <span class="p">=</span> <span class="s2">&#34;0.2&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">id</span> <span class="p">=</span> <span class="s2">&#34;io.buildpacks.bash-script&#34;</span>
@@ -935,13 +935,13 @@ file at the root of the application. For more on <code>gitignore</code> matching
 </span></span></span><span class="line"><span class="cl">    --path  samples/apps/bash-script/ <span class="se">\
 </span></span></span><span class="line"><span class="cl">    --descriptor  samples/apps/bash-script/&lt;project-descriptor-file.toml&gt;
 </span></span></code></pre></div><p>to specify an alternatively named <code>project descriptor</code>.</p>
-<h3 id="specify-buildpacks-and-envs">Specify Buildpacks and Envs</h3>
+<h3 id="specify-buildpacks-and-envs">Specify buildpacks and envs</h3>
 <p>As with other methods of <a href="/docs/for-app-developers/how-to/build-inputs/specify-buildpacks">specifying buildpacks</a>, the only ones used are those that are specifically
 requested. Therefore, if we&rsquo;d want to include another buildpack in our build (like a <code>hello-world</code> buildpack, to help us
 understand the environment), we would want to add it to our <code>project.toml</code>.</p>
 <blockquote>
 <p><strong>Note:</strong> Flags passed directly into <code>pack</code> have precedence over anything in the <code>project.toml</code>. Therefore, if we wanted
-to use different buildpacks in the above case, we could also call <code>pack build ... --buildpack ...</code></p>
+to use different buildpacks in the preceding case, we could also call <code>pack build ... --buildpack ...</code></p>
 </blockquote>
 <p>Below is an expanded <code>project.toml</code>, with an additional buildpack and environment variable included.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">_</span><span class="p">]</span>
@@ -965,7 +965,7 @@ to use different buildpacks in the above case, we could also call <code>pack bui
 </span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">io</span><span class="p">.</span><span class="nx">buildpacks</span><span class="p">.</span><span class="nx">build</span><span class="p">.</span><span class="nx">env</span><span class="p">]]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s1">&#39;HELLO&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">value</span><span class="p">=</span><span class="s1">&#39;WORLD&#39;</span>
-</span></span></code></pre></div><p>Paste the above <code>toml</code> as <code>new-project.toml</code> in the <code>samples/apps/bash-script/</code> directory, and simply:</p>
+</span></span></code></pre></div><p>Paste the preceding <code>toml</code> as <code>new-project.toml</code> in the <code>samples/apps/bash-script/</code> directory, and simply:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># build the app</span>
 </span></span><span class="line"><span class="cl">pack build sample-app <span class="se">\
 </span></span></span><span class="line"><span class="cl">    --builder cnbs/sample-builder:resolute <span class="se">\
@@ -974,14 +974,14 @@ to use different buildpacks in the above case, we could also call <code>pack bui
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># run the app</span>
 </span></span><span class="line"><span class="cl">docker run sample-app
-</span></span></code></pre></div><h3 id="specify-builder">Specify Builder</h3>
+</span></span></code></pre></div><h3 id="specify-builder">Specify builder</h3>
 <p>The builder can also be <a href="https://github.com/buildpacks/spec/blob/main/extensions/project-descriptor.md#iobuildpacksbuilder-optional">specified</a> in <code>project.toml</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">io</span><span class="p">.</span><span class="nx">buildpacks</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">builder</span> <span class="p">=</span> <span class="s2">&#34;cnbs/sample-builder:resolute&#34;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># then the pack command does not require builder to be set</span>
 </span></span><span class="line"><span class="cl">pack build sample-app <span class="se">\
 </span></span></span><span class="line"><span class="cl">    --path  samples/apps/bash-script/
-</span></span></code></pre></div><h3 id="further-reading">Further Reading</h3>
+</span></span></code></pre></div><h3 id="further-reading">Further reading</h3>
 <p>For more about project descriptors, look at the <a href="/docs/reference/project-descriptor/">schema</a>, as well as the <a href="https://github.com/buildpacks/spec/blob/main/extensions/project-descriptor.md">specification</a>.</p>
 
 

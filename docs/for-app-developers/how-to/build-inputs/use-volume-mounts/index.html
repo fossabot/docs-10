@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -896,7 +896,7 @@
           <h1 class="title">Mount volumes at build-time</h1>
         </div>
 
-        <h2 id="mounting-volumes---volume">Mounting Volumes (<code>--volume</code>)</h2>
+        <h2 id="mounting-volumes---volume">Mounting volumes (<code>--volume</code>)</h2>
 <p>The <code>--volume</code> parameter must be one of the following:</p>
 <ul>
 <li>A volume mount.</li>
@@ -954,7 +954,7 @@ docker volume rm test-volume
 </span></span></span><span class="line"><span class="cl">    --path samples/apps/bash-script <span class="se">\
 </span></span></span><span class="line"><span class="cl">    --volume test-volume:/platform/volume:ro
 </span></span></code></pre></div><!--+- "{{execute}}"+-->
-<p>The above <code>pack build ...</code> command will mount the <code>test-volume</code> volume in the <code>/platform</code> directory of the container.</p>
+<p>The preceding <code>pack build ...</code> command will mount the <code>test-volume</code> volume in the <code>/platform</code> directory of the container.</p>
 <p>Since we are using the <code>samples/hello-world</code> buildpack, we should see the <code>/platform</code> directory files listed:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[builder]      platform_dir files:
 </span></span><span class="line"><span class="cl">...

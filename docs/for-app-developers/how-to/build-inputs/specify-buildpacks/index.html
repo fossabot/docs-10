@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="No builder author can be truly omniscient, and whoever created yours surely was no exception!"/>
+<meta name="description" content="No builder author can be truly omniscient, and whoever created yours surely was no exception."/>
 <link rel="canonical" content="https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-buildpacks/">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-buildpacks/">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cloud Native Buildpacks">
-<meta property="og:description" content="No builder author can be truly omniscient, and whoever created yours surely was no exception!">
+<meta property="og:description" content="No builder author can be truly omniscient, and whoever created yours surely was no exception.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://buildpacks.io/images/buildpacks-social-card.jpg">
 <meta property="og:image:alt" content="Buildpacks project logo">
@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -931,7 +931,7 @@
       </tr>
   </tbody>
 </table>
-<h5 id="fallback-behavior">Fallback Behavior</h5>
+<h5 id="fallback-behavior">Fallback behavior</h5>
 <p>When a string does not include a scheme prefix (ex. <code>docker://</code>) and also does not match a path on the filesystem,
 a platform may attempt to resolve it to a URI in the following order:</p>
 <ul>
@@ -940,8 +940,8 @@ a platform may attempt to resolve it to a URI in the following order:</p>
 <li>If it looks like a Buildpack Registry ID, it will be treated as a <code>urn:cnb:registry</code> URI</li>
 </ul>
 <p>If you need to disambiguate a particular reference, use a fully qualified URI.</p>
-<h2 id="using-the-pack-cli">Using the Pack CLI</h2>
-<p>The <code>--buildpack</code> parameter accepts a URI in any of the formats described above.</p>
+<h2 id="using-the-pack-cli">Using the pack CLI</h2>
+<p>The <code>--buildpack</code> parameter accepts a URI in any of the formats described in the preceding table.</p>
 <h5 id="example">Example:</h5>
 <p>For this example we will use a few buildpacks from our <a href="https://github.com/buildpacks/samples">samples</a> repo.</p>
 <pre tabindex="0"><code>pack build sample-java-maven-app \
@@ -960,7 +960,7 @@ a platform may attempt to resolve it to a URI in the following order:</p>
 </blockquote>
 <p>Similarly, it is possible to provide extensions at build time:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pack build <span class="o">[</span>...<span class="o">]</span> --extension<span class="o">=</span>foo <span class="o">[</span>...<span class="o">]</span><span class="sb">`</span>
-</span></span></code></pre></div><h2 id="using-a-project-descriptor">Using a Project Descriptor</h2>
+</span></span></code></pre></div><h2 id="using-a-project-descriptor">Using a project descriptor</h2>
 <p>The <a href="/docs/for-app-developers/how-to/build-inputs/use-project-toml/"><code>project.toml</code></a> format allows for Buildpack URIs to be specified in the <code>[[io.buildpacks.group]]</code> table with the <code>uri</code> key.</p>
 <h5 id="example-1">Example:</h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">_</span><span class="p">]</span>
@@ -977,7 +977,7 @@ a platform may attempt to resolve it to a URI in the following order:</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">io</span><span class="p">.</span><span class="nx">buildpacks</span><span class="p">.</span><span class="nx">group</span><span class="p">]]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">uri</span> <span class="p">=</span> <span class="s2">&#34;docker://cnbs/sample-package:hello-universe&#34;</span>
-</span></span></code></pre></div><h2 id="uri-examples">URI Examples</h2>
+</span></span></code></pre></div><h2 id="uri-examples">URI examples</h2>
 <p>A path to a directory<sup><small>†</small></sup>, <code>tar</code> file, or <code>tgz</code> file</p>
 <ul>
 <li><code>./my/buildpack/</code></li>

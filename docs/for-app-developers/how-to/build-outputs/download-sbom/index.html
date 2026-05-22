@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="An SBOM can give you a layer-by-layer view of what&rsquo;s inside your application image."/>
+<meta name="description" content="An SBOM can give you a layer-by-layer view of what&rsquo;s inside your app image."/>
 <link rel="canonical" content="https://buildpacks.io/docs/for-app-developers/how-to/build-outputs/download-sbom/">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://buildpacks.io/docs/for-app-developers/how-to/build-outputs/download-sbom/">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cloud Native Buildpacks">
-<meta property="og:description" content="An SBOM can give you a layer-by-layer view of what&rsquo;s inside your application image.">
+<meta property="og:description" content="An SBOM can give you a layer-by-layer view of what&rsquo;s inside your app image.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://buildpacks.io/images/buildpacks-social-card.jpg">
 <meta property="og:image:alt" content="Buildpacks project logo">
@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 active">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -897,16 +897,16 @@
         </div>
 
         <h2 id="summary">Summary</h2>
-<p>A <strong>Software-Bill-of-Materials</strong> (<code>SBOM</code>) lists all the software components included in an image.  Cloud Native Buildpacks provides all the transparency you need to have confidence in your image supply chain.  Software-Bill-of-Materials in <a href="https://cyclonedx.org/">CycloneDX</a>, <a href="https://github.com/anchore/syft">Syft</a> and <a href="https://spdx.dev/">Spdx</a> formats are supported.</p>
+<p>A <strong>Software-Bill-of-Materials</strong> (<code>SBOM</code>) lists all the software components included in an image. Cloud Native Buildpacks provides all the transparency you need to have confidence in your image supply chain. Software-Bill-of-Materials in <a href="https://cyclonedx.org/">CycloneDX</a>, <a href="https://github.com/anchore/syft">Syft</a> and <a href="https://spdx.dev/">Spdx</a> formats are supported.</p>
 <ol>
 <li>Buildpacks can populate <code>SBOM</code> information about the dependencies they have provided.</li>
 </ol>
-<h2 id="viewing-bill-of-materials">Viewing Bill of Materials</h2>
-<p>You can use the <code>sbom download</code> command to inspect your app for its Software-Bill-of-Materials. The following command will download the application layer containing the <code>SBOM</code> files to <code>./layers/sbom/...</code> on your local filesystem.</p>
+<h2 id="viewing-bill-of-materials">Viewing bill of materials</h2>
+<p>You can use the <code>sbom download</code> command to inspect your app for its Software-Bill-of-Materials. The following command will download the app layer containing the <code>SBOM</code> files to <code>./layers/sbom/...</code> on your local filesystem.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pack sbom download your-image-name
 </span></span></code></pre></div><p>You can also choose to download the <code>SBOM</code> from an image hosted in a remote registry, as opposed to an image hosted in a Docker daemon. You use the <code>--remote</code> flag to do so.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pack sbom download your-image-name --remote
-</span></span></code></pre></div><p>The following example demonstrates  running <code>pack sbom download ...</code> on an image containing an <code>SBOM</code> in  <code>syft</code> format.  Running <code>pack sbom download ...</code> creates a <code>layers/sbom</code> directory and populates that directory with <code>sbom.syft.json</code> files.  The combined metadata from all of the <code>sbom.syft.json</code> files is the image <code>SBOM</code>. Where an image generates CycloneDX <code>SBOM</code> metadata, the files are named <code>sbom.cdx.json</code>. Similarly, Spdx files are named <code>sbom.spdx.json</code>.</p>
+</span></span></code></pre></div><p>The following example demonstrates running <code>pack sbom download ...</code> on an image containing an <code>SBOM</code> in <code>syft</code> format. Running <code>pack sbom download ...</code> creates a <code>layers/sbom</code> directory and populates that directory with <code>sbom.syft.json</code> files. The combined metadata from all of the <code>sbom.syft.json</code> files is the image <code>SBOM</code>. Where an image generates CycloneDX <code>SBOM</code> metadata, the files are named <code>sbom.cdx.json</code>. Similarly, Spdx files are named <code>sbom.spdx.json</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">layers
 </span></span><span class="line"><span class="cl">  └── sbom
 </span></span><span class="line"><span class="cl">      └── launch

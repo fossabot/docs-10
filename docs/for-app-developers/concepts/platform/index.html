@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="A platform orchestrates builds by invoking the lifecycle binary together with buildpacks and application source code to produce a runnable OCI image.
+<meta name="description" content="A platform orchestrates builds by invoking the lifecycle binary together with buildpacks and app source code to produce a runnable OCI image.
 "/>
 <link rel="canonical" content="https://buildpacks.io/docs/for-app-developers/concepts/platform/">
 <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://buildpacks.io/docs/for-app-developers/concepts/platform/">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cloud Native Buildpacks">
-<meta property="og:description" content="A platform orchestrates builds by invoking the lifecycle binary together with buildpacks and application source code to produce a runnable OCI image.
+<meta property="og:description" content="A platform orchestrates builds by invoking the lifecycle binary together with buildpacks and app source code to produce a runnable OCI image.
 ">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://buildpacks.io/images/buildpacks-social-card.jpg">
@@ -174,7 +174,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -254,10 +254,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -899,13 +899,13 @@
         </div>
 
         <p>A <code>platform</code> orchestrates <a href="/docs/for-platform-operators/concepts/lifecycle/">builds</a> by invoking the <a href="/docs/for-platform-operators/concepts/lifecycle/">lifecycle</a> binary together with <a href="/docs/for-app-developers/concepts/buildpack/">buildpacks</a> and
-application source code to produce a runnable OCI image.</p>
+app source code to produce a runnable OCI image.</p>
 <h2 id="examples">Examples</h2>
 <p>Examples of a platform might include:</p>
 <ul>
 <li>A local CLI tool that uses buildpacks to create OCI images. One such tool is the <a href="https://github.com/buildpacks/pack">Pack CLI</a></li>
 <li>A plugin for a continuous integration service that uses buildpacks to create OCI images. One such plugin is the <a href="https://github.com/tektoncd/catalog/tree/master/task/buildpacks">buildpacks</a> plugin in <a href="https://tekton.dev/">Tekton</a></li>
-<li>A cloud application platform that uses buildpacks to build source code before deployment. One such platform is <a href="https://github.com/buildpacks-community/kpack">kpack</a></li>
+<li>A cloud app platform that uses buildpacks to build source code before deployment. One such platform is <a href="https://github.com/buildpacks-community/kpack">kpack</a></li>
 </ul>
 <h2 id="api">API</h2>
 <p>The platform <a href="https://github.com/buildpacks/spec/blob/main/platform.md">specification</a> details what a platform does, and how it interacts with lifecycles and builders.</p>

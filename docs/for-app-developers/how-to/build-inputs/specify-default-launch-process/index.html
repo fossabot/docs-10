@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Buildpacks can define multiple processes for an application image. Specify which process should be the default."/>
+<meta name="description" content="Buildpacks can define multiple processes for an app image. Specify which process should be the default."/>
 <link rel="canonical" content="https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-default-launch-process/">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-default-launch-process/">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cloud Native Buildpacks">
-<meta property="og:description" content="Buildpacks can define multiple processes for an application image. Specify which process should be the default.">
+<meta property="og:description" content="Buildpacks can define multiple processes for an app image. Specify which process should be the default.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://buildpacks.io/images/buildpacks-social-card.jpg">
 <meta property="og:image:alt" content="Buildpacks project logo">
@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -896,10 +896,10 @@
           <h1 class="title">Specify the default launch process</h1>
         </div>
 
-        <p>While buildpacks usually define the default process type for an application, end users may specify the desired default process.</p>
+        <p>While buildpacks usually define the default process type for an app, end users may specify the desired default process.</p>
 <p>To specify the default process:</p>
 <ul>
-<li>You first need to know what named process types might be contributed by the buildpacks in your build; for more information, see docs for <a href="https://buildpacks.io/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">running the application</a></li>
+<li>You first need to know what named process types might be contributed by the buildpacks in your build; for more information, see docs for <a href="https://buildpacks.io/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">running the app</a></li>
 <li>Append the following flag to the <code>pack build</code> command:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pack build --default-process &lt;process name&gt; &lt;image name&gt;<span class="sb">`</span> <span class="c1"># &lt;process name&gt; must be a valid process name</span>

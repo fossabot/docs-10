@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Tell pack where you want your application image to be saved.
+<meta name="description" content="Tell pack where you want your app image to be saved.
 "/>
 <link rel="canonical" content="https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-export-target/">
 <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://buildpacks.io/docs/for-app-developers/how-to/build-inputs/specify-export-target/">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cloud Native Buildpacks">
-<meta property="og:description" content="Tell pack where you want your application image to be saved.
+<meta property="og:description" content="Tell pack where you want your app image to be saved.
 ">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://buildpacks.io/images/buildpacks-social-card.jpg">
@@ -174,7 +174,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -254,10 +254,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -898,18 +898,18 @@
           <h1 class="title">Specify export target</h1>
         </div>
 
-        <p>Tell <code>pack</code> where you want your application image to be saved.</p>
-<p>By default, when you build an application with <code>pack build &lt;my-image&gt;</code>, the image will be saved to a daemon, such as Docker or <a href="/docs/for-app-developers/how-to/special-cases/build-on-podman">Podman</a>,
+        <p>Tell <code>pack</code> where you want your app image to be saved.</p>
+<p>By default, when you build an app with <code>pack build &lt;my-image&gt;</code>, the image will be saved to a daemon, such as Docker or <a href="/docs/for-app-developers/how-to/special-cases/build-on-podman">Podman</a>,
 and you can view the image using a command such as <code>docker image ls</code>.</p>
-<p>However, you could also choose to &ldquo;publish&rdquo; the application to an OCI registry, such as Docker Hub or Google Artifact Registry,
+<p>However, you could also choose to &ldquo;publish&rdquo; the app to an OCI registry, such as Docker Hub or Google Artifact Registry,
 or even to a local registry, by providing the <code>pack build --publish</code> flag.</p>
 <p>Or, you could save the image in OCI layout format on disk by prefixing your image name with <code>oci:</code>, as in <code>pack build oci:&lt;my-image&gt;</code>.
 See <a href="/docs/for-app-developers/how-to/special-cases/export-to-oci-layout">here</a> for more information about working with layout images.</p>
-<h2 id="faq-what-am-i-using-the-daemon-for">FAQ: What am I using the daemon for?</h2>
+<h2 id="faq-what-am-i-using-the-daemon-for">FAQ: what am I using the daemon for?</h2>
 <p>Buildpacks always need to run in a containerized environment.
-Therefore, even when you publish the application image to a registry,
-<code>pack</code> is still using a daemon under the hood to create the build container(s) where buildpacks run.</p>
-<p>The relationship between the build container and the application container can be seen in the diagram below:</p>
+Therefore, even when you publish the app image to a registry,
+<code>pack</code> is still using a daemon under the hood to create the build containers where buildpacks run.</p>
+<p>The relationship between the build container and the app container can be seen in the diagram below:</p>
 <p><img src="/images/build-container-app-container.svg" alt="build diagram"></p>
 
         

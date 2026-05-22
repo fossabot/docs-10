@@ -26,7 +26,7 @@
       <link>https://buildpacks.io/docs/for-app-developers/concepts/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://buildpacks.io/docs/for-app-developers/concepts/build/</guid>
-      <description>&lt;p&gt;&lt;code&gt;Build&lt;/code&gt; is the process of executing one or more &lt;a href=&#34;https://buildpacks.io/docs/for-app-developers/concepts/buildpack/&#34;&gt;buildpacks&lt;/a&gt; against an application&amp;rsquo;s source code to produce a runnable OCI image.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;code&gt;Build&lt;/code&gt; is the process of executing one or more &lt;a href=&#34;https://buildpacks.io/docs/for-app-developers/concepts/buildpack/&#34;&gt;buildpacks&lt;/a&gt; against an app&amp;rsquo;s source code to produce a runnable OCI image.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What happens during rebase?</title>
@@ -40,7 +40,7 @@
       <link>https://buildpacks.io/docs/for-app-developers/concepts/platform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://buildpacks.io/docs/for-app-developers/concepts/platform/</guid>
-      <description>&lt;p&gt;A &lt;code&gt;platform&lt;/code&gt; orchestrates &lt;a href=&#34;https://buildpacks.io/docs/for-platform-operators/concepts/lifecycle/&#34;&gt;builds&lt;/a&gt; by invoking the &lt;a href=&#34;https://buildpacks.io/docs/for-platform-operators/concepts/lifecycle/&#34;&gt;lifecycle&lt;/a&gt; binary together with &lt;a href=&#34;https://buildpacks.io/docs/for-app-developers/concepts/buildpack/&#34;&gt;buildpacks&lt;/a&gt; and&#xA;application source code to produce a runnable OCI image.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A &lt;code&gt;platform&lt;/code&gt; orchestrates &lt;a href=&#34;https://buildpacks.io/docs/for-platform-operators/concepts/lifecycle/&#34;&gt;builds&lt;/a&gt; by invoking the &lt;a href=&#34;https://buildpacks.io/docs/for-platform-operators/concepts/lifecycle/&#34;&gt;lifecycle&lt;/a&gt; binary together with &lt;a href=&#34;https://buildpacks.io/docs/for-app-developers/concepts/buildpack/&#34;&gt;buildpacks&lt;/a&gt; and&#xA;app source code to produce a runnable OCI image.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What is build reproducibility?</title>

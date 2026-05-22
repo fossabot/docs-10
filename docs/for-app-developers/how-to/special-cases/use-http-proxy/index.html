@@ -172,7 +172,7 @@
   <a href="/docs/for-app-developers/tutorials/">Tutorials</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/tutorials/basic-app/" class="dd-item depth-2">
-  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first application with buildpacks</a>
+  <a href="/docs/for-app-developers/tutorials/basic-app/">Build your very first app with buildpacks</a>
 </li>
   </ul>
 </li>
@@ -252,10 +252,10 @@
   <a href="/docs/for-app-developers/how-to/build-outputs/">Understand build outputs</a>
   <ul class="ml-2">
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the application</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/specify-launch-process/">Run the app</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/inspect-app/" class="dd-item depth-3 collapse">
-  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your application image</a>
+  <a href="/docs/for-app-developers/how-to/build-outputs/inspect-app/">Inspect your app image</a>
 </li>
 <li data-nav-id="/docs/for-app-developers/how-to/build-outputs/download-sbom/" class="dd-item depth-3 collapse">
   <a href="/docs/for-app-developers/how-to/build-outputs/download-sbom/">Download a Software Bill-of-Materials (SBOM)</a>
@@ -896,29 +896,29 @@
           <h1 class="title">Use an HTTP proxy</h1>
         </div>
 
-        <p>Many university or corporate environments use a proxy to access HTTP and HTTPS resources on the web.  Proxies introduce two constraints on buildpack built applications:</p>
+        <p>Many university or corporate environments use a proxy to access HTTP and HTTPS resources on the web. Proxies introduce two constraints on buildpack built applications:</p>
 <ol>
 <li><code>pack</code> needs to download buildpacks through the proxies, and</li>
 <li>applications running in containers created by <code>pack</code> need to call APIs behind the proxy.</li>
 </ol>
 <p>We show how to solve both of these constraints.</p>
-<h2 id="making-pack-proxy-aware">Making <code>pack</code> Proxy Aware</h2>
-<p>You may need the <code>pack</code> command-line tool to download buildpacks and images via your proxy.  Building an application with an incorrectly configured proxy results in errors such as the following:</p>
+<h2 id="making-pack-proxy-aware">Making <code>pack</code> proxy aware</h2>
+<p>You may need the <code>pack</code> command-line tool to download buildpacks and images via your proxy. Building an app with an incorrectly configured proxy results in errors such as the following:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> pack build sample-app --path samples/apps/java-maven --builder cnbs/sample-builder:resolute
 </span></span><span class="line"><span class="cl"><span class="go">ERROR: failed to build: failed to fetch builder image &#39;index.docker.io/cnbs/sample-builder:resolute&#39;
 </span></span></span><span class="line"><span class="cl"><span class="go">: Error response from daemon: Get &#34;https//registry-1.docker.io/v2/&#34;: context deadline exceeded
-</span></span></span></code></pre></div><p>The <code>pack</code> tool uses the Docker daemon to manage the local image registry on your machine.  The <code>pack</code> tool will ask the Docker daemon to download buildpacks and images for you.  Because of this relationship, between <code>pack</code> and the Docker daemon, we need to configure the Docker daemon to use a HTTP proxy.  The approach to setting the HTTP proxy depends on your platform:</p>
-<h3 id="docker-desktop-windows-and-macos">Docker Desktop (Windows and MacOS)</h3>
-<p>Docker&rsquo;s documentation states &ldquo;Docker Desktop lets you configure HTTP/HTTPS Proxy Settings and automatically propagates these to Docker&rdquo;.  Set the system proxy using the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2591/mac">MacOS documentation</a> or <a href="https://www.dummies.com/computers/operating-systems/windows-10/how-to-set-up-a-proxy-in-windows-10/">Windows documentation</a>.  The system proxy settings will be used by Docker Desktop.</p>
+</span></span></span></code></pre></div><p>The <code>pack</code> tool uses the Docker daemon to manage the local image registry on your machine. The <code>pack</code> tool will ask the Docker daemon to download buildpacks and images for you. Because of this relationship, between <code>pack</code> and the Docker daemon, we need to configure the Docker daemon to use a HTTP proxy. The approach to setting the HTTP proxy depends on your platform:</p>
+<h3 id="docker-desktop-windows-and-macos">Docker Desktop (Windows and macOS)</h3>
+<p>Docker&rsquo;s documentation states &ldquo;Docker Desktop lets you configure HTTP/HTTPS Proxy Settings and automatically propagates these to Docker.&rdquo; Set the system proxy using the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2591/mac">MacOS documentation</a> or <a href="https://www.dummies.com/computers/operating-systems/windows-10/how-to-set-up-a-proxy-in-windows-10/">Windows documentation</a>. The system proxy settings will be used by Docker Desktop.</p>
 <h3 id="linux">Linux</h3>
-<p>The Docker project documents <a href="https://docs.docker.com/config/daemon/systemd/#httphttps-proxy">how to configure configure the HTTP/HTTPS proxy</a> settings for the Docker daemon on Linux.  You should configure the <code>HTTP_PROXY</code> and <code>HTTPS_PROXY</code> environment variables as part of the Docker daemon startup.</p>
-<h2 id="proxy-settings-for-buildpacks">Proxy Settings for Buildpacks</h2>
-<p>Buildpacks may also need to be aware of your http and https proxies at build time.  For example python, java and nodejs buildpacks need to be aware of proxies in order to resolve dependencies.  To make buildpacks aware of proxies, export the <code>http_proxy</code> and <code>https_proxy</code> environment variables before invoking <code>pack</code>.  For example:</p>
+<p>The Docker project documents <a href="https://docs.docker.com/config/daemon/systemd/#httphttps-proxy">how to configure the HTTP/HTTPS proxy</a> settings for the Docker daemon on Linux. You should configure the <code>HTTP_PROXY</code> and <code>HTTPS_PROXY</code> environment variables as part of the Docker daemon startup.</p>
+<h2 id="proxy-settings-for-buildpacks">Proxy settings for buildpacks</h2>
+<p>Buildpacks may also need to be aware of your HTTP and HTTPS proxies at build time. For example python, java and Node.js buildpacks need to be aware of proxies to resolve dependencies. To make buildpacks aware of proxies, export the <code>http_proxy</code> and <code>https_proxy</code> environment variables before invoking <code>pack</code>. For example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">export http_proxy=http://user:pass@my-proxy.example.com:3128
 </span></span></span><span class="line"><span class="cl"><span class="go">export https_proxy=https://my-proxy.example.com:3129
 </span></span></span><span class="line"><span class="cl"><span class="go">pack build sample-app --path samples/apps/java-maven --builder cnbs/sample-builder:resolute
-</span></span></span></code></pre></div><h2 id="making-your-application-proxy-aware">Making your Application Proxy Aware</h2>
-<p>Your application may need to use http or https proxies to access web-based APIs.  In order to make proxy settings available inside containers you should edit your <code>~/.docker/config.json</code> file (<code>%USERPROFILE%\.docker\config.json</code> on Windows) to contain the proxy information.  The <code>httpProxy</code>, <code>httpsProxy</code> and <code>noProxy</code> properties of this configuration file are injected into containers at build time and at run time as the <code>HTTP_PROXY</code>, <code>HTTPS_PROXY</code> and <code>NO_PROXY</code> environment variables respectively.  Both the http and https proxy settings are also injected in their lower-case form as <code>http_proxy</code> and <code>https_proxy</code>.</p>
+</span></span></span></code></pre></div><h2 id="making-your-app-proxy-aware">Making your app proxy aware</h2>
+<p>Your app may need to use HTTP or HTTPS proxies to access web-based APIs. To make proxy settings available inside containers you should edit your <code>~/.docker/config.json</code> file (<code>%USERPROFILE%\.docker\config.json</code> on Windows) to contain the proxy information. The <code>httpProxy</code>, <code>httpsProxy</code> and <code>noProxy</code> properties of this configuration file are injected into containers at build time and at run time as the <code>HTTP_PROXY</code>, <code>HTTPS_PROXY</code> and <code>NO_PROXY</code> environment variables respectively. Both the HTTP and HTTPS proxy settings are also injected in their lower-case form as <code>http_proxy</code> and <code>https_proxy</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;proxies&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;default&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -928,7 +928,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>If your application requires a http or https proxy, then you should prefer to read proxy information from the lower-case <code>http_proxy</code> and <code>https_proxy</code> variables.</p>
+</span></span></code></pre></div><p>If your app requires an HTTP or HTTPS proxy, then you should prefer to read proxy information from the lower-case <code>http_proxy</code> and <code>https_proxy</code> variables.</p>
 
 
         
