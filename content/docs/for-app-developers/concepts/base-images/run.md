@@ -7,24 +7,24 @@ aliases=[
 weight=2
 +++
 
-The **run image** provides the base image for application images.
+The **run image** provides the base image for app images.
 
 <!--more-->
 
-CNB tooling requires a reference to a run image and (where necessary) run image mirrors in order to construct the application image.
+CNB tooling requires a reference to a run image and (where necessary) run image mirrors to construct the app image.
 
 ### Run image mirrors
 
 Run image mirrors provide alternate locations for `run images`, for use during `build` or `rebase`.
 
-When run image mirrors are defined, CNB tooling will try to find a run image that resides on the same registry as the application image,
+When run image mirrors are defined, CNB tooling will try to find a run image that resides on the same registry as the app image,
 based on the image name provided.
 
-This is to reduce the amount of data transfer required to push the application image to a registry.
+This is to reduce the amount of data transfer required to push the app image to a registry.
 
 #### Example - determining the registry
 
-If the application image name is:
+If the app image name is:
 
 * `registry.example.com/example/app` - the registry is `registry.example.com`
 * `example/app` (registry omitted) - Docker Hub is assumed; the registry is `index.docker.io`
@@ -52,5 +52,5 @@ the selected run image will be `registry.example.com/example/run`.
 > This command does not modify the builder, and instead configures the local environment.
 >
 > To see what run images are configured for a builder, `pack builder inspect` can be used.
-> `pack builder inspect` will output built-in and locally-configured run images for a given builder, along with other useful information.
+> `pack builder inspect` will output built-in and locally configured run images for a given builder, along with other useful information.
 > The order of the run images in the output denotes the order in which they will be matched during `build`.
